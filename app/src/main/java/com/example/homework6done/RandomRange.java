@@ -9,4 +9,5 @@ public enum RandomRange {
     RandomRange(int value) {
         this.value = value;
     }
+
 }
