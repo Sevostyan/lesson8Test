@@ -1,0 +1,12 @@
+[1mdiff --git a/app/src/main/java/com/example/homework6done/RandomRange.java b/app/src/main/java/com/example/homework6done/RandomRange.java[m
+[1mindex 9bf7a64..e5a9df3 100644[m
+[1m--- a/app/src/main/java/com/example/homework6done/RandomRange.java[m
+[1m+++ b/app/src/main/java/com/example/homework6done/RandomRange.java[m
+[36m@@ -7,6 +7,6 @@[m [mpublic enum RandomRange {[m
+     int value;[m
+ [m
+     RandomRange(int value) {[m
+[31m-        this.value = value;[m
+[32m+[m[32m        this.value =[m
+     }[m
+ }[m
