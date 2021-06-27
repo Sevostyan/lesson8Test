@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="218dp"
+        android:layout_marginRight="218dp"
+        android:layout_marginBottom="486dp"
+        android:fontFamily="More Fonts..."
+        android:text="Авторизация"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="375dp"
+        android:fontFamily="@font/roboto"
+        android:lineHeight="20dp"
+        android:text="Укажите свой телефонный номер, \nчтобы сделать заказ"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="227dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_style"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="+8 800 2222 600"
+        android:inputType="phone"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        android:textColorHint="@color/black"
+        android:textSize="16sp"
+        />
+
+    <Button
+        android:id="@+id/StartButton"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="486dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="106dp"
+        android:backgroundTint="#27E8AB"
+        android:elevation="10dp"
+        android:fontFamily="More Fonts..."
+        android:text="НАЧАТЬ"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="558dp"
+        android:layout_marginBottom="68dp"
+        android:fontFamily="@font/work_sans"
+        android:text="Пропустить"
+        android:textColor="#DE6758"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Авторизуясь, я соглашаюсь с условиями пользования"
+        android:textSize="11sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/work_sans"
+        android:layout_marginTop="604dp"
+        android:layout_marginBottom="23dp"
+        android:layout_centerHorizontal="true"
+        android:linksClickable="true"/>
+</RelativeLayout>
