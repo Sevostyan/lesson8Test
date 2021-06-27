@@ -6,32 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvTitleFirstPart"
+    <ImageView
+        android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="online"
+        android:src="@drawable/ic_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvTitleSecondPart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SWIFTBOOK"
-        app:layout_constraintStart_toStartOf="@+id/tvTitleFirstPart"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleFirstPart" />
-
-    <ImageView
-        android:id="@+id/ivCircle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/shape_circle"
-        app:layout_constraintStart_toEndOf="@+id/tvTitleSecondPart"
-        app:layout_constraintTop_toTopOf="@+id/tvTitleFirstPart" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -39,9 +24,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:src="@drawable/ic_close_button"
-        app:layout_constraintBottom_toBottomOf="@id/tvTitleSecondPart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ivCircle" />
+        app:layout_constraintBottom_toBottomOf="@id/Title"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/tvSecondTitle"
@@ -50,24 +34,370 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="44dp"
-        android:text="Корзина"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitleSecondPart" />
+        app:layout_constraintTop_toBottomOf="@id/Title"
+        tools:text="Корзина" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clFirstFood"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tvSecondTitle"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp">
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/layout_bg1"
+        app:layout_constraintTop_toBottomOf="@+id/tvSecondTitle">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src=""/>
+            android:id="@+id/imSmallClose"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:src="@drawable/ic_close_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivTomyam"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/tomyam"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSoup"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tvCount"
+            app:layout_constraintStart_toEndOf="@+id/ivTomyam"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            tools:text="Том Ям суп с морепродуактами" />
+
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvSoup"
+            app:layout_constraintTop_toBottomOf="@+id/tvSoup"
+            tools:text="Кол-во: 2 шт" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="167dp"
+            android:layout_marginLeft="167dp"
+            android:background="@drawable/layout_bg"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvCount"
+            app:layout_constraintBottom_toBottomOf="@id/tvCount"
+            app:layout_constraintEnd_toEndOf="@+id/tvSoup"
+            tools:text="450 ₽" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSecondFood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/layout_bg1"
+        app:layout_constraintTop_toBottomOf="@+id/clFirstFood">
+
+        <ImageView
+            android:id="@id/imSmallClose"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:src="@drawable/ic_close_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPhiladelphia"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/sushi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/tvPhiladelphia"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tvCount"
+            app:layout_constraintStart_toEndOf="@+id/ivPhiladelphia"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            tools:text="Сет запеченая филадельфия" />
+
+        <TextView
+            android:id="@id/tvCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvPhiladelphia"
+            app:layout_constraintTop_toBottomOf="@+id/tvPhiladelphia"
+            tools:text="Кол-во: 1 шт" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="167dp"
+            android:layout_marginLeft="167dp"
+            android:background="@drawable/layout_bg"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvCount"
+            app:layout_constraintBottom_toBottomOf="@id/tvCount"
+            app:layout_constraintEnd_toEndOf="@id/tvPhiladelphia"
+            tools:text="115 ₽" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clThirdFood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/layout_bg1"
+        app:layout_constraintTop_toBottomOf="@+id/clSecondFood">
+
+        <ImageView
+            android:id="@id/imSmallClose"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:src="@drawable/ic_close_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivDesert"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/desert"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDesert"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tvCount"
+            app:layout_constraintStart_toEndOf="@+id/ivDesert"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            tools:text="Десерт круассан с грецкими" />
+
+        <TextView
+            android:id="@id/tvCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvDesert"
+            app:layout_constraintTop_toBottomOf="@+id/tvDesert"
+            tools:text="Кол-во: 1 шт" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_bg"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvCount"
+            app:layout_constraintBottom_toBottomOf="@id/tvCount"
+            app:layout_constraintEnd_toEndOf="@id/tvDesert"
+            tools:text="115 ₽" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="432dp"
+            android:fontFamily="@font/roboto"
+            tools:text="Комментарий"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etExtraInfo"
+            android:layout_width="match_parent"
+            android:layout_height="162dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#05000000"
+            android:fontFamily="@font/roboto"
+            android:gravity="top"
+
+            android:hint="Укажите дополнительную информацию \nк заказу"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/tvComment"
+            app:layout_constraintTop_toBottomOf="@+id/tvComment" />
+
+        <TextView
+            android:id="@+id/tvExtraSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Дополнительно"
+            android:text=""
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/etExtraInfo"
+            app:layout_constraintStart_toStartOf="@+id/tvComment"
+            android:layout_marginTop="48dp"/>
+
+        <TextView
+            android:id="@+id/SelfDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            tools:text="Самовывоз"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            app:layout_constraintBaseline_toBaselineOf="@+id/SwitchExtra"
+            android:textSize="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvExtraSwitch"
+            app:layout_constraintStart_toStartOf="@id/tvExtraSwitch"
+            android:layout_marginTop="36.73dp"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/SwitchExtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.903"
+            app:layout_constraintStart_toEndOf="@+id/SelfDelivery"
+            app:layout_constraintTop_toBottomOf="@+id/tvExtraSwitch"/>
+
+        <TextView
+            android:id="@+id/Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            tools:text="Оплата картой"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvExtraSwitch"
+            app:layout_constraintStart_toStartOf="@id/tvExtraSwitch"
+            android:layout_marginTop="85.73dp"/>
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/Card"
+            app:layout_constraintStart_toStartOf="@+id/SwitchExtra"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Card"/>
+
+        <TextView
+            android:id="@+id/Cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            tools:text="Оплата наличными"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvExtraSwitch"
+            app:layout_constraintStart_toStartOf="@id/tvExtraSwitch"
+            android:layout_marginTop="134dp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/Card"
+            app:layout_constraintStart_toStartOf="@+id/SwitchExtra"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Cash"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            tools:text="ЗАКАЗАТЬ"
+            app:layout_constraintTop_toBottomOf="@+id/Cash"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
